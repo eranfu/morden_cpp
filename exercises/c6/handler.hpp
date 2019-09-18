@@ -5,6 +5,7 @@
 #ifndef MORDEN_CPP_HANDLER_HPP
 #define MORDEN_CPP_HANDLER_HPP
 
+#include <fstream>
 #include "server_base.hpp"
 
 template<typename SERVER_TYPE>

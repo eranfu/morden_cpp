@@ -157,7 +157,7 @@ namespace Web {
                 } while (matched);
             }
 
-            std::cout << request;
+            std::cout << request << std::endl;
             return request;
         }
 
@@ -176,6 +176,7 @@ namespace Web {
                                 [this, request, socket]
                                         (const boost::system::error_code &ec, std::size_t bytes_transferred) {
                                     if (!ec && std::stof(request->http_version) > 1.05f) {
+                                        std::cout << "wait for new content";
                                         parse_request_and_respond(socket);
                                     }
                                 });
